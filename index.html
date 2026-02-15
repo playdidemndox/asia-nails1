@@ -688,6 +688,35 @@
             display: none;
         }
 
+        .delete-btn {
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: all 0.3s;
+        }
+
+        .delete-btn:hover {
+            background: #ff5252;
+        }
+
+        .work-item {
+            background: #f8f6f3;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .work-item-info {
+            flex: 1;
+        }
+
         /* Cloudinary widget customization */
         #cloudinary-widget {
             display: none;
@@ -739,10 +768,10 @@
     <!-- Соцсети -->
     <div class="social-bar">
         <div class="social-btn booksy-btn" onclick="window.open('https://pandabeautystudio.booksy.com/a/', '_blank')">
-            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/></svg>
         </div>
         <div class="social-btn insta-btn" onclick="window.open('https://www.instagram.com/panda_studio_ua?igsh=MW1vdzh3ZXVxNmxwYg==', '_blank')">
-            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.322a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001Z"/></svg>
         </div>
     </div>
 
@@ -877,6 +906,7 @@
 
 <script src="https://upload-widget.cloudinary.com/global/all.js"></script>
 
+<script>
         // ============================================
         // ВСТАВЬ СВОИ КЛЮЧИ CLOUDINARY ЗДЕСЬ!
         // ============================================
@@ -931,7 +961,7 @@
 
         function openCloudinary() {
             if (CLOUDINARY_CLOUD_NAME === 'ТВОЕ_CLOUD_NAME') {
-                alert('BŁĄD: Administrator musi wpisać klucze Cloudinary w kodzie!\n\nInstrukcja:\n1. Wejdź na cloudinary.com\n2. Zarejestruj się\n3. Skopiuj Cloud Name\n4. Utwórz Upload Preset\n5. Wklej w kodzie w miejscu oznaczonym "ВСТАВЬ СВОИ КЛЮЧИ"');
+                alert('BŁĄD: Administrator musi wpisać klucze Cloudinary w kodzie!\n\nInstrukcja:\n1. Wejdź na cloudinary.com\n2. Zarejestruj się\n3. Skopiuj Cloud Name\n4. Utwórz Upload Preset (bez wymagań podpisu)\n5. Wpisz te dane powyżej w linijkach 1 i 2');
                 return;
             }
             cloudinaryWidget.open();
@@ -992,7 +1022,7 @@
                 closeLogin();
                 document.getElementById('adminPanel').style.display = 'block';
                 renderAdmin();
-                initCloudinary(); // Инициализируем Cloudinary при входе
+                initCloudinary();
             } else {
                 alert('Nieprawidłowe hasło!');
             }
@@ -1000,83 +1030,67 @@
 
         function logout() {
             document.getElementById('adminPanel').style.display = 'none';
+            document.getElementById('imageUrl').value = '';
+            document.getElementById('preview').style.display = 'none';
+            document.getElementById('workPrice').value = '';
+            document.getElementById('workDesc').value = '';
         }
 
         function addWork() {
-            const imageUrl = document.getElementById('imageUrl').value;
-            const category = document.getElementById('workCategory').value;
+            const image = document.getElementById('imageUrl').value;
             const price = document.getElementById('workPrice').value;
-            const desc = document.getElementById('workDesc').value;
+            const description = document.getElementById('workDesc').value;
+            const category = document.getElementById('workCategory').value;
 
-            if (!imageUrl || !price || !desc) {
-                alert('Wypełnij wszystkie pola i załaduj zdjęcie!');
+            if (!image || !price || !description) {
+                alert('Wypełnij wszystkie pola!');
                 return;
             }
 
-            works.push({
-                id: Date.now(),
-                category: category,
-                image: imageUrl,
-                price: price,
-                description: desc
-            });
-
+            const newWork = { image, price, description, category, id: Date.now() };
+            works.push(newWork);
             localStorage.setItem('pandaStudioWorks', JSON.stringify(works));
-            
-            // Очистка формы
+
             document.getElementById('imageUrl').value = '';
+            document.getElementById('preview').style.display = 'none';
             document.getElementById('workPrice').value = '';
             document.getElementById('workDesc').value = '';
-            document.getElementById('preview').style.display = 'none';
-            
-            renderGallery();
+
             renderAdmin();
-            alert('Praca dodana! ✅ Zdjęcie jest widoczne dla wszystkich.');
+            renderGallery();
+            alert('Praca dodana pomyślnie! ✅');
         }
 
         function deleteWork(id) {
-            if (confirm('Usunąć tę pracę?')) {
-                works = works.filter(w => w.id !== id);
-                localStorage.setItem('pandaStudioWorks', JSON.stringify(works));
-                renderGallery();
-                renderAdmin();
-            }
+            works = works.filter(w => w.id !== id);
+            localStorage.setItem('pandaStudioWorks', JSON.stringify(works));
+            renderAdmin();
+            renderGallery();
         }
 
         function renderAdmin() {
-            const container = document.getElementById('adminWorks');
-            const categoryNames = {
-                'nails': 'Paznokcie',
-                'brows': 'Brwi',
-                'lashes': 'Rzęsy'
-            };
-            
+            const adminWorks = document.getElementById('adminWorks');
             if (works.length === 0) {
-                container.innerHTML = '<p style="text-align: center; color: #999; padding: 40px;">Brak dodanych prac</p>';
+                adminWorks.innerHTML = '<p style="text-align: center; color: #999;">Brak dodanych prac</p>';
                 return;
             }
 
-            container.innerHTML = works.map(work => `
-                <div style="display: flex; align-items: center; padding: 20px; border-bottom: 1px solid #eee; gap: 20px;">
-                    <img src="${work.image}" style="width: 80px; height: 80px; object-fit: cover; border-radius: 15px;">
-                    <div style="flex: 1;">
-                        <p style="font-weight: 600; margin-bottom: 5px;">${work.description}</p>
-                        <p style="color: var(--gold); font-size: 18px; font-weight: 600;">${work.price} zł</p>
-                        <p style="color: #999; font-size: 13px;">${categoryNames[work.category]}</p>
+            adminWorks.innerHTML = works.map(work => `
+                <div class="work-item">
+                    <div class="work-item-info">
+                        <h4>${work.description}</h4>
+                        <p style="color: #999; margin-top: 5px;">Cena: ${work.price} zł | Kategoria: ${work.category}</p>
                     </div>
-                    <button onclick="deleteWork(${work.id})" style="background: #ff4444; color: white; border: none; padding: 12px 25px; border-radius: 25px; cursor: pointer;">Usuń</button>
+                    <button class="delete-btn" onclick="deleteWork(${work.id})">Usuń</button>
                 </div>
             `).join('');
         }
 
-        // Закрытие модалки по клику вне
-        document.getElementById('loginModal').onclick = function(e) {
-            if (e.target === this) closeLogin();
-        };
-
-        window.onload = function() {
+        // Инициализация при загрузке
+        document.addEventListener('DOMContentLoaded', () => {
             renderGallery();
-        };
-    </script>
+        });
+</script>
+
 </body>
 </html>
